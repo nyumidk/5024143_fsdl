@@ -1,0 +1,69 @@
+body {
+    font-family:"Times New Roman", Times, serif;
+    color:antiquewhite;
+    font:bold;
+    background-image: linear-gradient(145deg, rgb(49, 0, 128), rgb(250, 150, 197));
+}
+.tasks {
+    margin-top: 5px;
+    min-height: 20px;            /* ensures a clickable area */
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.9em;
+    outline: none;               /* remove default focus outline */
+}
+
+.tasks div {
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: text;
+}
+
+.tasks .work {
+    background-color: #f28b82;   /* red-ish for work */
+    color: white;
+}
+
+.tasks .personal {
+    background-color: #aecbfa;   /* blue-ish for personal */
+    color: white;
+}
+
+.tasks .other {
+    background-color: #ccff90;   /* green-ish for misc */
+    color: black;
+}
+
+h1, h2 {
+    text-align: center;
+}
+.schedule{
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+
+td:hover {
+  background-color: #e6f0ff;
+  cursor: pointer;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color:bisque;
+    
+}
+
+th {
+    background-color: rgb(190, 144, 221);
+}
+
+td, th {
+    padding: 10px;
+    color:rgb(122, 51, 51);
+}

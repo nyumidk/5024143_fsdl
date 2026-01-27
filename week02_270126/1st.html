@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Calendar</h1>
+    <h2>Month: January 2026</h2>
+
+    <div class="schedule">
+        <table border="1">
+
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1<div class="tasks" contenteditable="true"></div></td>
+                <td>2<div class="tasks" contenteditable="true"></div></td>
+                <td>3<div class="tasks" contenteditable="true"></div></td>
+                <td>4<div class="tasks" contenteditable="true"></div></td>
+            </tr>
+
+            <tr>
+                <td>5<div class="tasks" contenteditable="true"></div></td>
+                <td>6<div class="tasks" contenteditable="true"></div></td>
+                <td>7<div class="tasks"contenteditable="true"></div></td>
+                <td>8<div class="tasks"contenteditable="true"></div></td>
+                <td>9<div class="tasks"contenteditable="true"></div></td>
+                <td>10<div class="tasks"contenteditable="true"></div></td>
+                <td>11<div class="tasks"contenteditable="true"></div></td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+
+            <tr>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+<script>
+const colors = ['work', 'personal', 'other'];
+
+document.querySelectorAll(".tasks").forEach(cell => {
+    cell.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            // Wrap the new line in a div for color coding
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
+            const newTask = document.createElement("div");
+            
+            // Ask user for category
+            const category = prompt("Task type: work, personal, other", "work");
+            if (colors.includes(category)) {
+                newTask.classList.add(category);
+            } else {
+                newTask.classList.add("other");
+            }
+            
+            newTask.textContent = ""; // empty line to type in
+            range.insertNode(newTask);
+            
+            // Move cursor inside the new div
+            const newRange = document.createRange();
+            newRange.setStart(newTask, 0);
+            newRange.collapse(true);
+            selection.removeAllRanges();
+            selection.addRange(newRange);
+        }
+    });
+});
+</script>
+
+
+</html>
