@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+.scene {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 1.5s ease;
+}
+
+.scene.dark {
+  background: #0b0b0b;
+}
+
+.scene.light {
+  background: radial-gradient(circle, #ffeaa7, #fdcb6e);
+}
+
+/* Candle */
+.candle {
+  width: 40px;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Flame */
+.flame {
+  width: 20px;
+  height: 20px;
+  background: orange;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 50% 50%;
+  animation: flicker 0.15s infinite;
+}
+
+/* Flame flicker */
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(0.8); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+
+/* Blown out flame */
+.flame.out {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Message */
+.message {
+  margin-top: 40px;
+  font-size: 3rem;
+  color: #2d3436;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.message.show {
+  opacity: 1;
+}
