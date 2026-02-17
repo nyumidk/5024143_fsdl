@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write a Review</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="bootstrap2.html">BookReview</a>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="bootstrap2.html">Home</a></li>
+      <li class="breadcrumb-item active">Write Review</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- Form Section -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          Submit Your Book Review
+        </div>
+        <div class="card-body">
+
+          <form>
+            <div class="form-group">
+              <label>Book Title</label>
+              <input type="text" class="form-control" placeholder="Enter book title">
+            </div>
+
+            <div class="form-group">
+              <label>Author Name</label>
+              <input type="text" class="form-control" placeholder="Enter author name">
+            </div>
+
+            <div class="form-group">
+              <label>Rating</label>
+              <select class="form-control">
+                <option>5 - Excellent</option>
+                <option>4 - Very Good</option>
+                <option>3 - Good</option>
+                <option>2 - Fair</option>
+                <option>1 - Poor</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Review</label>
+              <textarea class="form-control" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit Review</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3 mt-4">
+  © 2026 Book Review Blog
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

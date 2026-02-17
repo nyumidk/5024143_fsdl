@@ -1,0 +1,92 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+
+  /* notebook grid */
+  background-color: #fff8e8;
+  background-image:
+    linear-gradient(#f1d6a8 1px, transparent 1px),
+    linear-gradient(90deg, #f1d6a8 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* CENTERED NAV TITLE */
+.cute-nav {
+  background: #d7cf8a;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.nav-center {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: #5a4a2f;
+}
+
+/* main title */
+.title {
+  text-align: center;
+  color: #5a4a2f;
+}
+
+/* scrapbook style card */
+.cute-card {
+  background: #fff2cc;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 6px 6px 0px #cbbd8b;
+  border: 2px solid #cbbd8b;
+}
+
+/* cute input */
+.cute-input {
+  border-radius: 15px;
+  border: 2px solid #cbbd8b;
+  margin-bottom: 10px;
+}
+
+/* button */
+.cute-btn {
+  background: #cbbd8b;
+  border: none;
+  border-radius: 20px;
+  color: #5a4a2f;
+  font-weight: 500;
+}
+
+.cute-btn:hover {
+  background: #b8a96f;
+}
+
+/* recipe cards */
+.recipe-card {
+  list-style: none;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #cbbd8b;
+  box-shadow: 4px 4px 0px #cbbd8b;
+}
+
+/* favorite */
+.favorite {
+  background: #ffe6f0;
+}
+
+/* delete button */
+.delete-btn {
+  background: #5a4a2f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 8px;
+}
+
+.stats-text {
+  text-align: center;
+  font-weight: 500;
+  color: #5a4a2f;
+}

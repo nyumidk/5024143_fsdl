@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COOKIE! Recipe Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar cute-nav">
+  <div class="nav-center">🍪COOKIE!</div>
+</nav>
+ 
+
+
+<!-- MAIN -->
+<div class="container mt-4">
+
+  <h2 class="title">My Recipe Notebook✨</h2>
+
+
+  <!-- FORM CARD -->
+  <div class="card cute-card p-4">
+
+    <input type="text" id="name" class="form-control cute-input"
+           placeholder="Recipe name">
+
+    <input type="text" id="ingredients" class="form-control cute-input"
+           placeholder="Ingredients">
+
+    <input type="text" id="steps" class="form-control cute-input"
+           placeholder="Steps">
+
+    <button id="addRecipe" class="btn cute-btn mt-2">
+      Add Recipe ✨
+    </button>
+
+  </div>
+
+  <!-- RECIPE LIST -->
+  <ul id="recipeList" class="mt-4"></ul>
+
+  <p id="stats" class="text-center mt-3 stats-text"></p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
